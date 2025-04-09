@@ -8,7 +8,7 @@ public class DBConnUtil {
 
     public static Connection getConnection(String propertyFileName) {
         try {
-            String connectionString = DBPropertyUtil.getPropertyString(propertyFileName);
+            String connectionString = DBPropertyUtil.getPropertyString("db.properties");
             connection = DriverManager.getConnection(connectionString);
         } 
         catch (SQLException e) {
